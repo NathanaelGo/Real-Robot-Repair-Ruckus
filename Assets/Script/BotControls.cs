@@ -13,12 +13,13 @@ public class BotControls : MonoBehaviour
     public Rigidbody2D botRB;                           //Rigidbody for position movement 
     public CommandPointManager cpm;
     public int playerNum = 0;
+    public Vector2 robotSpawn;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -79,6 +80,12 @@ public class BotControls : MonoBehaviour
         controls[cpNum] = desiredControls[cpNum];
     }
 
-
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Hazard")
+        {
+            moveRobotTo(robotSpawn);
+        }
+    }
 
 }
