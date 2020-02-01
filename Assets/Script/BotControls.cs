@@ -79,6 +79,4 @@ public class BotControls : MonoBehaviour
         controls[cpNum] = desiredControls[cpNum];
     }
 
-
-
 }
