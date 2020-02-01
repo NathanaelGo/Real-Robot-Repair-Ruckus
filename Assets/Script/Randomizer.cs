@@ -43,6 +43,11 @@ public class Randomizer : MonoBehaviour
 
         }
 
+        if(test == 3)
+        {
+
+        }
+
         if(EMPOn && (Time.time - timeBetweenEMP) >= timeHolderEMP)
         {
             timeHolderEMP = Time.time;
