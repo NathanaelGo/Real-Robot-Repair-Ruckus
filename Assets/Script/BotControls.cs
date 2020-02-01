@@ -9,6 +9,7 @@ public class BotControls : MonoBehaviour
     public string[] desiredControls = new string[5];    //When a Cp is captured Controls used for player  |  Asigned in the Unity Editor
     public float maxSpeed = 2.0f;                       //Speed of the player
 
+
     [Header("Stuff used in Commands")]
     public Rigidbody2D botRB;                           //Rigidbody for position movement 
     public CommandPointManager cpm;
@@ -77,6 +78,11 @@ public class BotControls : MonoBehaviour
     public void setControlDesired(int cpNum)                                            //For setting controls when cp is captured
     {
         controls[cpNum] = desiredControls[cpNum];
+    }
+
+    public void moveRobotTo(Vector2 location)
+    {
+        botRB.position = location;
     }
 
 }
