@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class BotControls : MonoBehaviour
 {
+    [Header("Controls")]
     public string[] controls = new string[5];           //Controls used for player  |  Asigned in the Unity Editor
     public string[] desiredControls = new string[5];    //When a Cp is captured Controls used for player  |  Asigned in the Unity Editor
-    public Rigidbody2D botRB;                           //Rigidbody for position movement 
-    
     public float maxSpeed = 2.0f;                       //Speed of the player
 
+    [Header("Stuff used in Commands")]
+    public Rigidbody2D botRB;                           //Rigidbody for position movement 
     public CommandPointManager cpm;
     public int playerNum = 0;
 

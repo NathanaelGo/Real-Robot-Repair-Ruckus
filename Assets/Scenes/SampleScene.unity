@@ -156,9 +156,9 @@ MonoBehaviour:
   - d
   - s
   - q
-  botRB: {fileID: 295590580}
   maxSpeed: 2.5
-  cpm: {fileID: 0}
+  botRB: {fileID: 295590580}
+  cpm: {fileID: 519420030}
   playerNum: 1
 --- !u!50 &295590580
 Rigidbody2D:
@@ -379,7 +379,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueBot: {fileID: 295590578}
-  redBot: {fileID: 0}
+  redBot: {fileID: 597869013}
+  EMPOn: 1
+  timeBetweenEMP: 5
   test: 0
 --- !u!1 &597869013
 GameObject:
@@ -425,9 +427,9 @@ MonoBehaviour:
   - right
   - down
   - m
-  botRB: {fileID: 597869015}
   maxSpeed: 2.5
-  cpm: {fileID: 0}
+  botRB: {fileID: 597869015}
+  cpm: {fileID: 519420030}
   playerNum: 2
 --- !u!50 &597869015
 Rigidbody2D:

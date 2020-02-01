@@ -5,15 +5,25 @@ using UnityEngine;
 
 public class Randomizer : MonoBehaviour
 {
+
     public GameObject blueBot;
     public GameObject redBot;
+
+    [Header("Timer")]
+    public bool EMPOn = true;
+    public float timeBetweenEMP;
+    private float timeHolderEMP;
+
+    [Header("Debug Area")]
     public int test = 0;
+
+
 
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        timeHolderEMP = Time.time;
     }
 
     // Update is called once per frame
@@ -22,6 +32,21 @@ public class Randomizer : MonoBehaviour
         if (test == 1)
         {
             test = 0;
+            randomizerControls();
+        }
+
+        if(test == 2)
+        {
+            Debug.Log(Time.time - timeBetweenEMP);
+            Debug.Log(timeHolderEMP);
+            test = 0;
+
+        }
+
+        if(EMPOn && (Time.time - timeBetweenEMP) >= timeHolderEMP)
+        {
+            timeHolderEMP = Time.time;
+            Debug.Log("WORKING AS INTENDONT");
             randomizerControls();
         }
     }
