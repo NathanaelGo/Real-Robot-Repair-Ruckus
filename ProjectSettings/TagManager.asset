@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Hazard
+  - Interact CP
+  - Up CP
+  - Left CP
+  - Down CP
+  - Right CP
   layers:
   - Default
   - TransparentFX
