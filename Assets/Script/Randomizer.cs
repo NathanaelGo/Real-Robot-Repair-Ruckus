@@ -8,6 +8,7 @@ public class Randomizer : MonoBehaviour
 
     public GameObject blueBot;
     public GameObject redBot;
+    public GameObject randomizedText;
 
     [Header("Timer")]
     public bool EMPOn = true;
@@ -67,6 +68,8 @@ public class Randomizer : MonoBehaviour
     public void randomizerControls()
     {
         System.Random random = new System.Random();
+
+        randomizedText.SetActive(true);
 
         //List<string> controlHolder = new List<string>() { "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "f", "g", "h", "j", "k", "l", ";", "'","space", "z", "x", "c", "v", "b", "n", ",", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0","-","\\","=" };
         List<string> rcHolder = new List<string>() { "8", "9", "0", "-", "\\", "=","]","[","p","o","i","u","j","k","l",";","'",",",".","/"};    //Red possible inputs

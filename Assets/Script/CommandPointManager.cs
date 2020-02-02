@@ -12,6 +12,7 @@ public class CommandPointManager : MonoBehaviour
     public int pointsToWin = 150;
 
     public GameObject redScoreBar;
+    public GameObject blueScoreBar;
 
     public float lastPointAddTime;
 
@@ -55,6 +56,7 @@ public class CommandPointManager : MonoBehaviour
     {
 
         float redPercent = (((float)redPoints / (float)pointsToWin) * 100.0f);
+        float bluePercent = (((float)bluePoints / (float)pointsToWin) * 100.0f);
 
         for (int i = 0; i < 5; i++)
         {
@@ -62,14 +64,18 @@ public class CommandPointManager : MonoBehaviour
                 bluePoints++;
             if (cpState[i] == 2)
                 redPoints++;
-            Debug.Log("Red Points: " + redPoints + " Red Ticks: " + redTicks + " Red Percentage: " + redPercent);
         }
         if(redPercent >= 4 * redTicks)
         {
             redTicks++;
             string newScoreBar = "Red_Bar/Red_Score_Bar_" + redTicks;
-            Debug.Log("NewScoreBar:" + newScoreBar);
             redScoreBar.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(newScoreBar);
+        }
+        if(bluePercent >= 4 * blueTicks)
+        {
+            blueTicks++;
+            string newScoreBar = "Blue_Bar/Blue_Score_Bar_" + blueTicks;
+            blueScoreBar.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(newScoreBar);
         }
     }
 
