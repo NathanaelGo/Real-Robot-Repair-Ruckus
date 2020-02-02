@@ -89,7 +89,7 @@ public class CommandPointManager : MonoBehaviour
 
             if(cpb == cpr)
             {
-                return 4;
+                return 4;                                               //SUDDEN DEATH
             }
             if(cpb > cpr)
             {
