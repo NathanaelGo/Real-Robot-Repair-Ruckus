@@ -28,6 +28,12 @@ public class BotControls : MonoBehaviour
     public Sprite downSprite;
     public Sprite rightSprite;
 
+    [Header("Sounds")]
+    public AudioClip walk;
+    public AudioClip explosion;
+
+    private AudioSource Sound;
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +41,7 @@ public class BotControls : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         robotSpawn = new Vector2(spawnPoint.transform.position.x, spawnPoint.transform.position.y + 1.0f);
         canMove = true;
+        Sound = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -56,24 +63,40 @@ public class BotControls : MonoBehaviour
                 botRB.position += new Vector2(0.0f, maxSpeed) * Time.deltaTime;
                 anim.SetBool("isWalkLeft", false);
                 anim.SetBool("isWalkRight", true);
+                if (!Sound.isPlaying)
+                {
+                    Sound.PlayOneShot(walk, 1.0f);
+                }                
             }
             if (Input.GetKey(controls[1])) //left
             {
                 botRB.position += new Vector2(-maxSpeed, 0.0f) * Time.deltaTime;
                 anim.SetBool("isWalkLeft", true);
                 anim.SetBool("isWalkRight", false);
+                if (!Sound.isPlaying)
+                {
+                    Sound.PlayOneShot(walk, 1.0f);
+                }
             }
             if (Input.GetKey(controls[2])) //right
             {
                 botRB.position += new Vector2(maxSpeed, 0.0f) * Time.deltaTime;
                 anim.SetBool("isWalkLeft", false);
                 anim.SetBool("isWalkRight", true);
+                if (!Sound.isPlaying)
+                {
+                    Sound.PlayOneShot(walk, 1.0f);
+                }
             }
             if (Input.GetKey(controls[3])) //down
             {
                 botRB.position += new Vector2(0.0f, -maxSpeed) * Time.deltaTime;
                 anim.SetBool("isWalkLeft", true);
                 anim.SetBool("isWalkRight", false);
+                if (!Sound.isPlaying)
+                {
+                    Sound.PlayOneShot(walk, 1.0f);
+                }
             }
             if (Input.GetKey(controls[4])) //interact
             {
@@ -165,7 +188,12 @@ public class BotControls : MonoBehaviour
     public void moveRobotTo(Vector2 location)
     {
         Instantiate(deathExplosion, gameObject.transform.position, Quaternion.identity);
+        Sound.PlayOneShot(explosion, 1.0f);
         botRB.position = location;
+        anim.SetBool("isWalkRight", false);
+        anim.SetBool("isWalkLeft", false);
+        anim.SetBool("isInteract", true);
+        canMove = false;
     }
 
 }
