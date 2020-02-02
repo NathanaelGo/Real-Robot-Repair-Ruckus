@@ -9,6 +9,9 @@ public class Randomizer : MonoBehaviour
     public GameObject blueBot;
     public GameObject redBot;
     public GameObject randomizedText;
+    public GameObject artilla;
+
+    private Animator artillaAnim;
 
     [Header("Timer")]
     public bool EMPOn = true;
@@ -27,6 +30,7 @@ public class Randomizer : MonoBehaviour
     void Start()
     {
         timeHolderEMP = Time.time;
+        artillaAnim = artilla.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -56,7 +60,40 @@ public class Randomizer : MonoBehaviour
             }
         }
 
-        if(EMPOn && (Time.time - timeBetweenEMP) >= timeHolderEMP)
+        //Change Artilla animations
+
+        if (EMPOn && (Time.time - (timeBetweenEMP * 0.75f)) >= timeHolderEMP)
+        {
+            artillaAnim.SetBool("isIdle", false);
+            artillaAnim.SetBool("isStage1", false);
+            artillaAnim.SetBool("isStage2", false);
+            artillaAnim.SetBool("isStage3", true);
+        }
+        else if (EMPOn && (Time.time - (timeBetweenEMP * 0.5f)) >= timeHolderEMP)
+        {
+            artillaAnim.SetBool("isIdle", false);
+            artillaAnim.SetBool("isStage1", false);
+            artillaAnim.SetBool("isStage2", true);
+            artillaAnim.SetBool("isStage3", false);
+        }
+        else if (EMPOn && (Time.time - (timeBetweenEMP * 0.25f)) >= timeHolderEMP)
+        {
+            artillaAnim.SetBool("isIdle", false);
+            artillaAnim.SetBool("isStage1", true);
+            artillaAnim.SetBool("isStage2", false);
+            artillaAnim.SetBool("isStage3", false);
+        }
+        else
+        {
+            artillaAnim.SetBool("isIdle", true);
+            artillaAnim.SetBool("isStage1", false);
+            artillaAnim.SetBool("isStage2", false);
+            artillaAnim.SetBool("isStage3", false);
+        }
+
+        //Fire EMP
+
+        if (EMPOn && (Time.time - timeBetweenEMP) >= timeHolderEMP)
         {
             timeHolderEMP = Time.time;
             Debug.Log("EMP FIRED");
