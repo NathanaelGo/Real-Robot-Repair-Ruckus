@@ -15,44 +15,57 @@ public class BotControls : MonoBehaviour
     public CommandPointManager cpm;
     public int playerNum = 0;
     public Vector2 robotSpawn;
+    private Animator anim;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         
-        //Movement Code
+        //Movement & Animation Code
 
-        if (Input.GetKey(controls[0]))
+        if (Input.GetKey(controls[0])) //up
         {
             botRB.position += new Vector2 (0.0f, maxSpeed) * Time.deltaTime;
+            anim.SetBool("isWalkLeft", false);
+            anim.SetBool("isWalkRight", true);
         }
-        if (Input.GetKey(controls[1]))
+        if (Input.GetKey(controls[1])) //left
         {
             botRB.position += new Vector2(-maxSpeed, 0.0f) * Time.deltaTime;
+            anim.SetBool("isWalkLeft", true);
+            anim.SetBool("isWalkRight", false);
         }
-        if (Input.GetKey(controls[2]))
+        if (Input.GetKey(controls[2])) //right
         {
             botRB.position += new Vector2(maxSpeed, 0.0f) * Time.deltaTime;
+            anim.SetBool("isWalkLeft", false);
+            anim.SetBool("isWalkRight", true);
         }
-        if (Input.GetKey(controls[3]))
+        if (Input.GetKey(controls[3])) //down
         {
             botRB.position += new Vector2(0.0f, -maxSpeed) * Time.deltaTime;
+            anim.SetBool("isWalkLeft", true);
+            anim.SetBool("isWalkRight", false);
         }
-        if (Input.GetKey(controls[4]))
+        if (Input.GetKey(controls[4])) //interact
         {
+            anim.SetBool("isWalkRight", false);
+            anim.SetBool("isWalkLeft", false);
             interact();                                                                 
         }
-
+        if (!Input.GetKey(controls[0]) && !Input.GetKey(controls[1]) && !Input.GetKey(controls[2]) && !Input.GetKey(controls[3]) && !Input.GetKey(controls[4]))
+        {
+            anim.SetBool("isWalkRight", false);
+            anim.SetBool("isWalkLeft", false);
+        }
     }
-
-
 
     public void interact()                                                              //Holder meathod for later use
     {

@@ -229,7 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blueBot: {fileID: 295590578}
   redBot: {fileID: 597869013}
-  EMPOn: 1
+  EMPOn: 0
   timeBetweenEMP: 30
   test: 0
 --- !u!1 &597869013 stripped
@@ -238,6 +238,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6018651716009739763}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &597869019
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597869013}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d29acd9a111064d428e6f4f265554df3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1297218587
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +648,12 @@ PrefabInstance:
     - target: {fileID: 7119055479338410124, guid: 32b4e62ec2601c64e987aba08ef01415,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7119055479338410124, guid: 32b4e62ec2601c64e987aba08ef01415,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 53448136ca9458a40ad996e8fb4c4648, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32b4e62ec2601c64e987aba08ef01415, type: 3}
