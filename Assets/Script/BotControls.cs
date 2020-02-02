@@ -17,6 +17,7 @@ public class BotControls : MonoBehaviour
     public Vector2 robotSpawn;
     public GameObject spawnPoint;
     private Animator anim;
+    public GameObject deathExplosion;
 
     [Header("Sprites")]
     public Sprite interactSprite;
@@ -149,6 +150,7 @@ public class BotControls : MonoBehaviour
     }
     public void moveRobotTo(Vector2 location)
     {
+        Instantiate(deathExplosion, gameObject.transform.position, Quaternion.identity);
         botRB.position = location;
     }
 
