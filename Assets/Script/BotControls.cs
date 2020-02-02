@@ -20,6 +20,8 @@ public class BotControls : MonoBehaviour
     public GameObject deathExplosion;
     private bool canMove;
     public float interactOffset;
+    public int pushVelocity;
+    public GameObject push;
 
     [Header("Sprites")]
     public Sprite interactSprite;
@@ -33,6 +35,7 @@ public class BotControls : MonoBehaviour
     public AudioClip explosion;
 
     private AudioSource Sound;
+    private Rigidbody2D roboRig;
 
 
     // Start is called before the first frame update
@@ -42,6 +45,7 @@ public class BotControls : MonoBehaviour
         robotSpawn = new Vector2(spawnPoint.transform.position.x, spawnPoint.transform.position.y + 1.0f);
         canMove = true;
         Sound = gameObject.GetComponent<AudioSource>();
+        roboRig = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -103,6 +107,7 @@ public class BotControls : MonoBehaviour
                 anim.SetBool("isWalkRight", false);
                 anim.SetBool("isWalkLeft", false);
                 anim.SetBool("isInteract", true);
+                interact();
                 canMove = false;
             }
             if (!Input.GetKey(controls[0]) && !Input.GetKey(controls[1]) && !Input.GetKey(controls[2]) && !Input.GetKey(controls[3]) && !Input.GetKey(controls[4]))
@@ -116,7 +121,7 @@ public class BotControls : MonoBehaviour
     public void interact()                                                              //Holder meathod for later use
     {
         Debug.Log("Interact Key Pressed");
-
+        Instantiate(push, gameObject.transform.position, Quaternion.identity);
     }
 
 
@@ -183,12 +188,16 @@ public class BotControls : MonoBehaviour
             cpm.cpState[2] = playerNum;
             setControlDesired(2);
         }
-
+        if(canMove && collision.tag == "Push")
+        {
+            roboRig.velocity = new Vector2((roboRig.position.x - collision.transform.position.x) * pushVelocity, (roboRig.position.y - collision.transform.position.y) * pushVelocity);
+        }
     }
     public void moveRobotTo(Vector2 location)
     {
         Instantiate(deathExplosion, gameObject.transform.position, Quaternion.identity);
         Sound.PlayOneShot(explosion, 1.0f);
+        roboRig.velocity = new Vector2(0, 0);
         botRB.position = location;
         anim.SetBool("isWalkRight", false);
         anim.SetBool("isWalkLeft", false);
