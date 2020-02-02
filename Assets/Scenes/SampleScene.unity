@@ -336,7 +336,7 @@ MonoBehaviour:
   blueBot: {fileID: 295590578}
   redBot: {fileID: 597869013}
   EMPOn: 1
-  timeBetweenEMP: 30
+  timeBetweenEMP: 45
   test: 0
 --- !u!1 &597869013 stripped
 GameObject:
@@ -1501,6 +1501,11 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1211966615}
+    - target: {fileID: 6018651715416130597, guid: 7c51988b33fa975498c8a75fb830935b,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6018651715416130598, guid: 7c51988b33fa975498c8a75fb830935b,
         type: 3}
       propertyPath: m_Name
@@ -1706,6 +1711,11 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 2125679877}
+    - target: {fileID: 7119055479338410119, guid: 32b4e62ec2601c64e987aba08ef01415,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7119055479338410124, guid: 32b4e62ec2601c64e987aba08ef01415,
         type: 3}
       propertyPath: m_Enabled
