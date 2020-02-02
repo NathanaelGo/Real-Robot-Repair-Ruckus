@@ -11,12 +11,19 @@ public class CommandPointManager : MonoBehaviour
     public int redPoints = 0;
     public int pointsToWin = 150;
 
+    public GameObject redScoreBar;
+
     public float lastPointAddTime;
+
+    private int redTicks;
+    private int blueTicks;
 
     // Start is called before the first frame update
     void Start()
     {
         lastPointAddTime = Time.time;
+        redTicks = 0;
+        blueTicks = 0;
     }
 
     // Update is called once per frame
@@ -46,12 +53,23 @@ public class CommandPointManager : MonoBehaviour
 
     public void addPoints()
     {
-        for(int i = 0; i < 5; i++)
+
+        float redPercent = (((float)redPoints / (float)pointsToWin) * 100.0f);
+
+        for (int i = 0; i < 5; i++)
         {
             if (cpState[i] == 1)
                 bluePoints++;
             if (cpState[i] == 2)
                 redPoints++;
+            Debug.Log("Red Points: " + redPoints + " Red Ticks: " + redTicks + " Red Percentage: " + redPercent);
+        }
+        if(redPercent >= 4 * redTicks)
+        {
+            redTicks++;
+            string newScoreBar = "Red_Bar/Red_Score_Bar_" + redTicks;
+            Debug.Log("NewScoreBar:" + newScoreBar);
+            redScoreBar.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(newScoreBar);
         }
     }
 
