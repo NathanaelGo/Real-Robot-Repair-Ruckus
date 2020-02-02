@@ -15,6 +15,7 @@ public class BotControls : MonoBehaviour
     public CommandPointManager cpm;
     public int playerNum = 0;
     public Vector2 robotSpawn;
+    public GameObject spawnPoint;
     private Animator anim;
 
     [Header("Sprites")]
@@ -29,6 +30,7 @@ public class BotControls : MonoBehaviour
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
+        robotSpawn = new Vector2(spawnPoint.transform.position.x, spawnPoint.transform.position.y + 1.0f);
     }
 
     // Update is called once per frame
