@@ -14,6 +14,8 @@ public class Randomizer : MonoBehaviour
     public float timeBetweenEMP;
     private float timeHolderEMP;
 
+    public GameObject timer;
+
     [Header("Debug Area")]
     public int test = 0;
 
