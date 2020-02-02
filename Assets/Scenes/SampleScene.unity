@@ -195,7 +195,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -408,12 +408,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211966615}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1214916437
 GameObject:
@@ -810,7 +810,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1452719306
 GameObject:
@@ -1308,12 +1308,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125679877}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6018651716009739763
 PrefabInstance:
@@ -1357,6 +1357,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d7a1977ebc844724582fb538c139e6cc,
         type: 3}
+    - target: {fileID: 6018651715416130597, guid: 7c51988b33fa975498c8a75fb830935b,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1211966615}
     - target: {fileID: 6018651715416130598, guid: 7c51988b33fa975498c8a75fb830935b,
         type: 3}
       propertyPath: m_Name
@@ -1551,6 +1556,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 658201d8f1eb3434e8645e92002efeb3,
         type: 3}
+    - target: {fileID: 7119055479338410119, guid: 32b4e62ec2601c64e987aba08ef01415,
+        type: 3}
+      propertyPath: robotSpawn.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119055479338410119, guid: 32b4e62ec2601c64e987aba08ef01415,
+        type: 3}
+      propertyPath: robotSpawn.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119055479338410119, guid: 32b4e62ec2601c64e987aba08ef01415,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 2125679877}
     - target: {fileID: 7119055479338410124, guid: 32b4e62ec2601c64e987aba08ef01415,
         type: 3}
       propertyPath: m_Enabled
