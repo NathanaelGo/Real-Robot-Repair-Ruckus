@@ -14,6 +14,6 @@ public class Artilla : MonoBehaviour
 
     void playBeep()
     {
-        Sounds.PlayOneShot(beep, 1.0f);
+        Sounds.PlayOneShot(beep, 0.7f);
     }
 }

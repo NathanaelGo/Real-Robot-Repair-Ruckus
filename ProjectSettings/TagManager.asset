@@ -10,6 +10,7 @@ TagManager:
   - Left CP
   - Down CP
   - Right CP
+  - Push
   layers:
   - Default
   - TransparentFX
