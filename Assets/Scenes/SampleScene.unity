@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 519420033}
   - component: {fileID: 519420030}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -265,6 +266,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cpState: 0000000000000000000000000000000000000000
+  bluePoints: 0
+  redPoints: 0
+  pointsToWin: 150
+  lastPointAddTime: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -336,8 +341,22 @@ MonoBehaviour:
   blueBot: {fileID: 295590578}
   redBot: {fileID: 597869013}
   EMPOn: 0
-  timeBetweenEMP: 30
+  timeBetweenEMP: 45
   test: 0
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d3278ef7da41b44abd3fcbd7f79de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wall: {fileID: 6987820208601540508, guid: e0cdb7f455a9f8b40bbd9aecc16fb0b7, type: 3}
+  hazard: {fileID: 8208200723545113816, guid: a69371a329e64064e9d4c79a395b17cb, type: 3}
 --- !u!1 &597869013 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6018651715416130598, guid: 7c51988b33fa975498c8a75fb830935b,
@@ -648,7 +667,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214916437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9, y: 13, z: 0}
+  m_LocalPosition: {x: -8.75, y: 13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -754,7 +773,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244701868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: -13, z: 0}
+  m_LocalPosition: {x: 8.75, y: -13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1178,7 +1197,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891809560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19, y: -13, z: 0}
+  m_LocalPosition: {x: 18.875, y: -13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1284,7 +1303,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936029402}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19, y: 13, z: 0}
+  m_LocalPosition: {x: -18.875, y: 13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1422,6 +1441,11 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1211966615}
+    - target: {fileID: 6018651715416130597, guid: 7c51988b33fa975498c8a75fb830935b,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6018651715416130598, guid: 7c51988b33fa975498c8a75fb830935b,
         type: 3}
       propertyPath: m_Name
@@ -1627,6 +1651,11 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 2125679877}
+    - target: {fileID: 7119055479338410119, guid: 32b4e62ec2601c64e987aba08ef01415,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7119055479338410119, guid: 32b4e62ec2601c64e987aba08ef01415,
         type: 3}
       propertyPath: interactOffset

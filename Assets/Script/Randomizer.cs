@@ -13,6 +13,7 @@ public class Randomizer : MonoBehaviour
     public bool EMPOn = true;
     public float timeBetweenEMP;
     private float timeHolderEMP;
+    public GameObject timer;
 
     [Header("Debug Area")]
     public int test = 0;
@@ -56,9 +57,10 @@ public class Randomizer : MonoBehaviour
         if(EMPOn && (Time.time - timeBetweenEMP) >= timeHolderEMP)
         {
             timeHolderEMP = Time.time;
-            Debug.Log("WORKING AS INTENDONT");
+            Debug.Log("EMP FIRED");
             randomizerControls();
         }
+
     }
 
     public void randomizerControls()
@@ -90,6 +92,4 @@ public class Randomizer : MonoBehaviour
         redBot.GetComponent<BotControls>().updateControls(redControls);
 
     }
-
-
 }
