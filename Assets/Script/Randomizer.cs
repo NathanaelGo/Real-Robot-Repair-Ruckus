@@ -117,7 +117,7 @@ public class Randomizer : MonoBehaviour
         //List<string> rcHolder = new List<string>() { "8", "9", "0", "-", "\\", "=","]","[","p","o","i","u","j","k","l",";","'",",",".","/"};    //Red possible inputs
         //List<string> bcHolder = new List<string>() {"1", "2", "3", "4", "5", "6", "7","e","r","t","y","f","g","h","z","x","c","v","b","n" };    //Blue possible inputs
 
-        List<string> rcHolder = new List<string>() {"i","o","p","\\","k","l",";","'",",",".","/" };
+        List<string> rcHolder = new List<string>() {"i","o","p","[","k","l",";","'",",",".","/" };
         List<string> bcHolder = new List<string>() { "1", "2", "3", "4", "5","e","r","f","c","x","z" };
         string[] blueControls = new string[5];
         string[] redControls = new string[5];
