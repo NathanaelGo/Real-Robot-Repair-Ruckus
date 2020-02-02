@@ -16,6 +16,13 @@ public class BotControls : MonoBehaviour
     public int playerNum = 0;
     public Vector2 robotSpawn;
 
+    [Header("Sprites")]
+    public Sprite interactSprite;
+    public Sprite upSprite;
+    public Sprite leftSprite;
+    public Sprite downSprite;
+    public Sprite rightSprite;
+
 
     // Start is called before the first frame update
     void Start()
@@ -87,6 +94,31 @@ public class BotControls : MonoBehaviour
         {
             moveRobotTo(robotSpawn);
         }
+
+        if (collision.tag == "Interact CP")
+        {
+              collision.gameObject.GetComponent<SpriteRenderer>().sprite = interactSprite;
+		}
+
+        if (collision.tag == "Up CP")
+        {
+              collision.gameObject.GetComponent<SpriteRenderer>().sprite = upSprite;
+		}
+
+        if (collision.tag == "Left CP")
+        {
+              collision.gameObject.GetComponent<SpriteRenderer>().sprite = leftSprite;
+		}
+
+        if (collision.tag == "Down CP")
+        {
+              collision.gameObject.GetComponent<SpriteRenderer>().sprite = downSprite;
+		}
+
+        if (collision.tag == "Right CP")
+        {
+              collision.gameObject.GetComponent<SpriteRenderer>().sprite = rightSprite;
+		}
 
     }
     public void moveRobotTo(Vector2 location)
