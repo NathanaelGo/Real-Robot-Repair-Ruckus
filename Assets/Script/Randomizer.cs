@@ -14,6 +14,7 @@ public class Randomizer : MonoBehaviour
     public float timeBetweenEMP;
     private float timeHolderEMP;
     public GameObject timer;
+    private string s;
 
     [Header("Debug Area")]
     public int test = 0;
@@ -60,7 +61,6 @@ public class Randomizer : MonoBehaviour
             Debug.Log("EMP FIRED");
             randomizerControls();
         }
-
     }
 
     public void randomizerControls()
