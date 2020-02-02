@@ -18,6 +18,8 @@ public class BotControls : MonoBehaviour
     public GameObject spawnPoint;
     private Animator anim;
     public GameObject deathExplosion;
+    private bool canMove;
+    public float interactOffset;
 
     [Header("Sprites")]
     public Sprite interactSprite;
@@ -32,54 +34,66 @@ public class BotControls : MonoBehaviour
     {
         anim = gameObject.GetComponent<Animator>();
         robotSpawn = new Vector2(spawnPoint.transform.position.x, spawnPoint.transform.position.y + 1.0f);
+        canMove = true;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        if (!canMove)
+        {
+            if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime + interactOffset >= anim.GetCurrentAnimatorStateInfo(0).length)
+            {
+                canMove = true;
+                anim.SetBool("isInteract", false);
+            }
+        }
         //Movement & Animation Code
-
-        if (Input.GetKey(controls[0])) //up
+        if (canMove)
         {
-            botRB.position += new Vector2 (0.0f, maxSpeed) * Time.deltaTime;
-            anim.SetBool("isWalkLeft", false);
-            anim.SetBool("isWalkRight", true);
-        }
-        if (Input.GetKey(controls[1])) //left
-        {
-            botRB.position += new Vector2(-maxSpeed, 0.0f) * Time.deltaTime;
-            anim.SetBool("isWalkLeft", true);
-            anim.SetBool("isWalkRight", false);
-        }
-        if (Input.GetKey(controls[2])) //right
-        {
-            botRB.position += new Vector2(maxSpeed, 0.0f) * Time.deltaTime;
-            anim.SetBool("isWalkLeft", false);
-            anim.SetBool("isWalkRight", true);
-        }
-        if (Input.GetKey(controls[3])) //down
-        {
-            botRB.position += new Vector2(0.0f, -maxSpeed) * Time.deltaTime;
-            anim.SetBool("isWalkLeft", true);
-            anim.SetBool("isWalkRight", false);
-        }
-        if (Input.GetKey(controls[4])) //interact
-        {
-            anim.SetBool("isWalkRight", false);
-            anim.SetBool("isWalkLeft", false);
-            interact();                                                                 
-        }
-        if (!Input.GetKey(controls[0]) && !Input.GetKey(controls[1]) && !Input.GetKey(controls[2]) && !Input.GetKey(controls[3]) && !Input.GetKey(controls[4]))
-        {
-            anim.SetBool("isWalkRight", false);
-            anim.SetBool("isWalkLeft", false);
+            if (Input.GetKey(controls[0])) //up
+            {
+                botRB.position += new Vector2(0.0f, maxSpeed) * Time.deltaTime;
+                anim.SetBool("isWalkLeft", false);
+                anim.SetBool("isWalkRight", true);
+            }
+            if (Input.GetKey(controls[1])) //left
+            {
+                botRB.position += new Vector2(-maxSpeed, 0.0f) * Time.deltaTime;
+                anim.SetBool("isWalkLeft", true);
+                anim.SetBool("isWalkRight", false);
+            }
+            if (Input.GetKey(controls[2])) //right
+            {
+                botRB.position += new Vector2(maxSpeed, 0.0f) * Time.deltaTime;
+                anim.SetBool("isWalkLeft", false);
+                anim.SetBool("isWalkRight", true);
+            }
+            if (Input.GetKey(controls[3])) //down
+            {
+                botRB.position += new Vector2(0.0f, -maxSpeed) * Time.deltaTime;
+                anim.SetBool("isWalkLeft", true);
+                anim.SetBool("isWalkRight", false);
+            }
+            if (Input.GetKey(controls[4])) //interact
+            {
+                anim.SetBool("isWalkRight", false);
+                anim.SetBool("isWalkLeft", false);
+                anim.SetBool("isInteract", true);
+                canMove = false;
+            }
+            if (!Input.GetKey(controls[0]) && !Input.GetKey(controls[1]) && !Input.GetKey(controls[2]) && !Input.GetKey(controls[3]) && !Input.GetKey(controls[4]))
+            {
+                anim.SetBool("isWalkRight", false);
+                anim.SetBool("isWalkLeft", false);
+            }
         }
     }
 
     public void interact()                                                              //Holder meathod for later use
     {
         Debug.Log("Interact Key Pressed");
+
     }
 
 
