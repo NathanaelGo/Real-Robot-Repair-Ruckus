@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CommandPointManager : MonoBehaviour
 {
@@ -39,10 +40,14 @@ public class CommandPointManager : MonoBehaviour
             if (hold == 1)
             {
                 Debug.Log("Blue Wins!");
+                PlayerPrefs.SetInt("Winner", 1);
+                SceneManager.LoadScene(3);
             }
             if (hold == 2)
             {
                 Debug.Log("Red Wins!");
+                PlayerPrefs.SetInt("Winner", 2);
+                SceneManager.LoadScene(3);
             }
             if(hold == 4)
             {
