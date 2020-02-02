@@ -342,6 +342,7 @@ MonoBehaviour:
   redBot: {fileID: 597869013}
   EMPOn: 0
   timeBetweenEMP: 45
+  timer: {fileID: 0}
   test: 0
 --- !u!114 &519420034
 MonoBehaviour:
@@ -1446,6 +1447,11 @@ PrefabInstance:
       propertyPath: maxSpeed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6018651715416130597, guid: 7c51988b33fa975498c8a75fb830935b,
+        type: 3}
+      propertyPath: interactOffset
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6018651715416130598, guid: 7c51988b33fa975498c8a75fb830935b,
         type: 3}
       propertyPath: m_Name
@@ -1659,7 +1665,7 @@ PrefabInstance:
     - target: {fileID: 7119055479338410119, guid: 32b4e62ec2601c64e987aba08ef01415,
         type: 3}
       propertyPath: interactOffset
-      value: 0.2
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7119055479338410124, guid: 32b4e62ec2601c64e987aba08ef01415,
         type: 3}
