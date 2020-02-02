@@ -113,30 +113,35 @@ public class BotControls : MonoBehaviour
         {
             collision.gameObject.GetComponent<SpriteRenderer>().sprite = interactSprite;
             cpm.cpState[4] = playerNum;
-		}
+            setControlDesired(4);
+        }
 
         if (collision.tag == "Up CP" && Input.GetKey(controls[4]))
         {
             collision.gameObject.GetComponent<SpriteRenderer>().sprite = upSprite;
             cpm.cpState[0] = playerNum;
+            setControlDesired(0);
         }
 
         if (collision.tag == "Left CP" && Input.GetKey(controls[4]))
         {
             collision.gameObject.GetComponent<SpriteRenderer>().sprite = leftSprite;
             cpm.cpState[1] = playerNum;
+            setControlDesired(1);
         }
 
         if (collision.tag == "Down CP" && Input.GetKey(controls[4]))
         {
             collision.gameObject.GetComponent<SpriteRenderer>().sprite = downSprite;
             cpm.cpState[3] = playerNum;
+            setControlDesired(3);
         }
 
         if (collision.tag == "Right CP" && Input.GetKey(controls[4]))
         {
             collision.gameObject.GetComponent<SpriteRenderer>().sprite = rightSprite;
             cpm.cpState[2] = playerNum;
+            setControlDesired(2);
         }
 
     }

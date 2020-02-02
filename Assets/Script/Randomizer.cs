@@ -28,7 +28,8 @@ public class Randomizer : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        //For Debugging
         if (test == 1)
         {
             test = 0;
@@ -45,7 +46,11 @@ public class Randomizer : MonoBehaviour
 
         if(test == 3)
         {
-
+            for(int i = 0; i < 5; i++)
+            {
+                blueBot.GetComponent<BotControls>().setControlDesired(i);
+                redBot.GetComponent<BotControls>().setControlDesired(i);
+            }
         }
 
         if(EMPOn && (Time.time - timeBetweenEMP) >= timeHolderEMP)
