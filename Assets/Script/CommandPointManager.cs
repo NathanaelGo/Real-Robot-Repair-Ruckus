@@ -19,4 +19,9 @@ public class CommandPointManager : MonoBehaviour
     {
         
     }
+
+    void changeCapturePoint(int playerNumber)
+    {
+    
+	}
 }
