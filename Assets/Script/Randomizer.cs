@@ -57,9 +57,10 @@ public class Randomizer : MonoBehaviour
         if(EMPOn && (Time.time - timeBetweenEMP) >= timeHolderEMP)
         {
             timeHolderEMP = Time.time;
-            Debug.Log("WORKING AS INTENDONT");
+            Debug.Log("EMP FIRED");
             randomizerControls();
         }
+
     }
 
     public void randomizerControls()

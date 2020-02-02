@@ -266,6 +266,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cpState: 0000000000000000000000000000000000000000
+  bluePoints: 0
+  redPoints: 0
+  pointsToWin: 150
+  lastPointAddTime: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
