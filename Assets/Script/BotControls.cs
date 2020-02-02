@@ -188,11 +188,12 @@ public class BotControls : MonoBehaviour
             cpm.cpState[2] = playerNum;
             setControlDesired(2);
         }
-        if(canMove && collision.tag == "Push")
+        if (canMove && collision.tag == "Push")
         {
             roboRig.velocity = new Vector2((roboRig.position.x - collision.transform.position.x) * pushVelocity, (roboRig.position.y - collision.transform.position.y) * pushVelocity);
         }
     }
+
     public void moveRobotTo(Vector2 location)
     {
         Instantiate(deathExplosion, gameObject.transform.position, Quaternion.identity);
