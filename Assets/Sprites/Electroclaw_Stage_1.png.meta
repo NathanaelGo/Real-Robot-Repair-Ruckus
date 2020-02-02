@@ -64,14 +64,14 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -84,7 +84,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -95,7 +95,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,16 +113,16 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbf0d4c142432534ebf7b51f8bbed8eb
+      spriteID: f4ee62b7b0876514dbb3864988067a09
       vertices: []
       indices: 
       edges: []
@@ -131,18 +131,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 128
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 182e3326c5c28594ba6e2020db8856eb
+      spriteID: 5ade37dbc793ff24c976f7f47dc315d6
       vertices: []
       indices: 
       edges: []
@@ -151,18 +151,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 256
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 055b5c7cf3afc774ebfd2f11de00ffdc
+      spriteID: e614669d3ec0bfc4c8326816d0cd6a27
       vertices: []
       indices: 
       edges: []
@@ -171,18 +171,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 384
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acb096930f9f37342bd7b0a7deb8b45e
+      spriteID: af9532d09652eef4882064dc9166b872
       vertices: []
       indices: 
       edges: []
@@ -191,18 +191,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_4
       rect:
         serializedVersion: 2
-        x: 128
+        x: 512
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 095e81a1eadfe07429663aa3a614a7aa
+      spriteID: 29dbce2b609f83749ac68dd1396a0871
       vertices: []
       indices: 
       edges: []
@@ -211,18 +211,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_5
       rect:
         serializedVersion: 2
-        x: 160
+        x: 640
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5ac926099741b64e83eb2639e111a94
+      spriteID: f6e979350a6fc554bb1ef071bb96fe77
       vertices: []
       indices: 
       edges: []
@@ -231,18 +231,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_6
       rect:
         serializedVersion: 2
-        x: 192
+        x: 768
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a587ba2e989ab047820648dafedee70
+      spriteID: 6d898ad0c01549643bf2db304bf44d7f
       vertices: []
       indices: 
       edges: []
@@ -251,18 +251,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_7
       rect:
         serializedVersion: 2
-        x: 224
+        x: 896
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e5e70ddbb727284e869d817d604727e
+      spriteID: d25551ea005c2e241ac65b3d5810eca5
       vertices: []
       indices: 
       edges: []
@@ -271,18 +271,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_8
       rect:
         serializedVersion: 2
-        x: 256
+        x: 1024
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9a06cb6e78a2754d87431b8c01cbb90
+      spriteID: 26747e650c715064689804c4b5334c39
       vertices: []
       indices: 
       edges: []
@@ -291,18 +291,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_9
       rect:
         serializedVersion: 2
-        x: 288
+        x: 1152
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ebfe2157b2807246a8afd8da173c1f1
+      spriteID: f0b2efbcae73d874792ba381f7ccb33d
       vertices: []
       indices: 
       edges: []
@@ -311,18 +311,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_10
       rect:
         serializedVersion: 2
-        x: 320
+        x: 1280
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3644bd30fa391074b9ebe4484cbc8ca2
+      spriteID: 8993cd90b3d39b44797beea103a891b6
       vertices: []
       indices: 
       edges: []
@@ -331,18 +331,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_11
       rect:
         serializedVersion: 2
-        x: 352
+        x: 1408
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a0c6adcd363b924496a76b981223f55
+      spriteID: 8b86eea2a660a7745907612a02b9abe0
       vertices: []
       indices: 
       edges: []
@@ -351,18 +351,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_12
       rect:
         serializedVersion: 2
-        x: 384
+        x: 1536
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5aa4f04a78637345b3aa3242f09c42d
+      spriteID: cfa62a1089ef7984db56b2ca5ac386a6
       vertices: []
       indices: 
       edges: []
@@ -371,18 +371,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_13
       rect:
         serializedVersion: 2
-        x: 416
+        x: 1664
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bac9d628c0df8940a20810f7c82ad67
+      spriteID: d215d20b943cb9347a2e4b41c1c1e69e
       vertices: []
       indices: 
       edges: []
@@ -391,18 +391,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_14
       rect:
         serializedVersion: 2
-        x: 448
+        x: 1792
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d7732cf5af5c6945b7a55c469819d7c
+      spriteID: 599b9c26dd66a514a8428dc6895ccdc7
       vertices: []
       indices: 
       edges: []
@@ -411,18 +411,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_15
       rect:
         serializedVersion: 2
-        x: 480
+        x: 1920
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cf4a6a23924a27469e78498fcad4617
+      spriteID: 15a104532de928d43a35d236732c0521
       vertices: []
       indices: 
       edges: []
@@ -431,18 +431,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_16
       rect:
         serializedVersion: 2
-        x: 512
+        x: 2048
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f78e51c18ea3276498b4394b63156cde
+      spriteID: fd919ab05e869ce4c9d8231ec132bb88
       vertices: []
       indices: 
       edges: []
@@ -451,18 +451,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_17
       rect:
         serializedVersion: 2
-        x: 544
+        x: 2176
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b418054f78c63704f9f6cd3e3db7b12a
+      spriteID: ef4cb555c4ec1ac44a45e0a9d9b44a72
       vertices: []
       indices: 
       edges: []
@@ -471,18 +471,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_18
       rect:
         serializedVersion: 2
-        x: 576
+        x: 2304
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd607d4a4649e78438311c3db5598374
+      spriteID: fe7966c5046990c42b0e8383a01748fe
       vertices: []
       indices: 
       edges: []
@@ -491,18 +491,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_19
       rect:
         serializedVersion: 2
-        x: 608
+        x: 2432
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6aabe2dc1b5f7d341abe1e75e8745e89
+      spriteID: 43ab1caf576b6504ebb1a04c58d64546
       vertices: []
       indices: 
       edges: []
@@ -511,18 +511,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_20
       rect:
         serializedVersion: 2
-        x: 640
+        x: 2560
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb97e34b399a7b743ba94a882d0b8589
+      spriteID: 227845e467c97874b9ef8711d42a1e02
       vertices: []
       indices: 
       edges: []
@@ -531,18 +531,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_21
       rect:
         serializedVersion: 2
-        x: 672
+        x: 2688
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 946f592dc9d5e394182a64cea7c616d0
+      spriteID: f81f3792228eb0b45ac8835de22080a7
       vertices: []
       indices: 
       edges: []
@@ -551,18 +551,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_22
       rect:
         serializedVersion: 2
-        x: 704
+        x: 2816
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaa35a5b75a886547ba10e41a3373480
+      spriteID: 638aea21326259f4e951c008bafe51bd
       vertices: []
       indices: 
       edges: []
@@ -571,18 +571,18 @@ TextureImporter:
       name: Electroclaw_Stage_1_23
       rect:
         serializedVersion: 2
-        x: 736
+        x: 2944
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28cfe2e8fc1a94b4f8ab4228e4f8125f
+      spriteID: 2dfbeb77b0faf76459386cccdbccc406
       vertices: []
       indices: 
       edges: []
@@ -590,7 +590,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 656e825bad827c1438f91e302c8bcd77
+    spriteID: e684512a28c171e40a8e5c8ba4f88ab2
     vertices: []
     indices: 
     edges: []
