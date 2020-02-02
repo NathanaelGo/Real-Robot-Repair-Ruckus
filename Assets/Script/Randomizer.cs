@@ -35,6 +35,11 @@ public class Randomizer : MonoBehaviour
         timeHolderEMP = Time.time;
         artillaAnim = artilla.GetComponent<Animator>();
         Sounds = gameObject.GetComponent<AudioSource>();
+
+        if(test == 5)
+        {
+            randomizerControls();
+        }
     }
 
     // Update is called once per frame
