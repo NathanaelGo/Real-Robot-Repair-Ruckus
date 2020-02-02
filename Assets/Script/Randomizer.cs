@@ -11,7 +11,10 @@ public class Randomizer : MonoBehaviour
     public GameObject randomizedText;
     public GameObject artilla;
 
+    public AudioClip empBlast;
+
     private Animator artillaAnim;
+    private AudioSource Sounds;
 
     [Header("Timer")]
     public bool EMPOn = true;
@@ -31,6 +34,7 @@ public class Randomizer : MonoBehaviour
     {
         timeHolderEMP = Time.time;
         artillaAnim = artilla.GetComponent<Animator>();
+        Sounds = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -96,6 +100,7 @@ public class Randomizer : MonoBehaviour
         if (EMPOn && (Time.time - timeBetweenEMP) >= timeHolderEMP)
         {
             timeHolderEMP = Time.time;
+            Sounds.PlayOneShot(empBlast, 1.0f);
             Debug.Log("EMP FIRED");
             randomizerControls();
         }
