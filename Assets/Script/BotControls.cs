@@ -101,37 +101,48 @@ public class BotControls : MonoBehaviour
         controls[cpNum] = desiredControls[cpNum];
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+
+    public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Hazard")
         {
             moveRobotTo(robotSpawn);
         }
 
-        if (collision.tag == "Interact CP")
+        if (collision.tag == "Interact CP" && Input.GetKey(controls[4]))
         {
-              collision.gameObject.GetComponent<SpriteRenderer>().sprite = interactSprite;
-		}
+            collision.gameObject.GetComponent<SpriteRenderer>().sprite = interactSprite;
+            cpm.cpState[4] = playerNum;
+            setControlDesired(4);
+        }
 
-        if (collision.tag == "Up CP")
+        if (collision.tag == "Up CP" && Input.GetKey(controls[4]))
         {
-              collision.gameObject.GetComponent<SpriteRenderer>().sprite = upSprite;
-		}
+            collision.gameObject.GetComponent<SpriteRenderer>().sprite = upSprite;
+            cpm.cpState[0] = playerNum;
+            setControlDesired(0);
+        }
 
-        if (collision.tag == "Left CP")
+        if (collision.tag == "Left CP" && Input.GetKey(controls[4]))
         {
-              collision.gameObject.GetComponent<SpriteRenderer>().sprite = leftSprite;
-		}
+            collision.gameObject.GetComponent<SpriteRenderer>().sprite = leftSprite;
+            cpm.cpState[1] = playerNum;
+            setControlDesired(1);
+        }
 
-        if (collision.tag == "Down CP")
+        if (collision.tag == "Down CP" && Input.GetKey(controls[4]))
         {
-              collision.gameObject.GetComponent<SpriteRenderer>().sprite = downSprite;
-		}
+            collision.gameObject.GetComponent<SpriteRenderer>().sprite = downSprite;
+            cpm.cpState[3] = playerNum;
+            setControlDesired(3);
+        }
 
-        if (collision.tag == "Right CP")
+        if (collision.tag == "Right CP" && Input.GetKey(controls[4]))
         {
-              collision.gameObject.GetComponent<SpriteRenderer>().sprite = rightSprite;
-		}
+            collision.gameObject.GetComponent<SpriteRenderer>().sprite = rightSprite;
+            cpm.cpState[2] = playerNum;
+            setControlDesired(2);
+        }
 
     }
     public void moveRobotTo(Vector2 location)
